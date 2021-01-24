@@ -6,13 +6,14 @@ min_confidence = 0.1
 width = 1500
 height = 0
 show_ratio = 1.0
-file_name = './py_image/test01.jpg'
+file_name = './py_image/test04.png'
+#file_name = './blackbox-data/train/images/Cars69.png'
 
 net = cv2.dnn.readNet("./weights/license-yolo_final.weights", "./cfg/custom-train-yolo.cfg")
 
 classes = []
 
-with open("./model/obj.names", "r") as f:
+with open("./weights/classes.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
 #with open("./weights/lapi.names", "r") as f:
